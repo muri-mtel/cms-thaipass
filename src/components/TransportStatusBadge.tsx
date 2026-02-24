@@ -5,7 +5,7 @@ const statusConfig: Record<TransportStatus, { className: string }> = {
     className: 'bg-amber-50 text-amber-700 border border-amber-200',
   },
   Confirmed: {
-    className: 'bg-blue-50 text-blue-700 border border-blue-200',
+    className: 'bg-blue-50 text-[#004493] border border-blue-200',
   },
   Completed: {
     className: 'bg-green-50 text-green-700 border border-green-200',

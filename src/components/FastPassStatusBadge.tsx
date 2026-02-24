@@ -5,7 +5,7 @@ const statusConfig: Record<FastPassStatus, { className: string }> = {
     className: 'bg-green-50 text-green-700 border border-green-200',
   },
   Redeemed: {
-    className: 'bg-blue-50 text-blue-700 border border-blue-200',
+    className: 'bg-blue-50 text-[#004493] border border-blue-200',
   },
   Expired: {
     className: 'bg-slate-100 text-slate-500 border border-slate-200',

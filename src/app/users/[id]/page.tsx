@@ -48,7 +48,7 @@ export default function UserDetailPage() {
         <p className="text-lg">User not found.</p>
         <button
           onClick={() => router.push('/users')}
-          className="mt-4 text-sm text-blue-600 hover:underline"
+          className="mt-4 text-sm text-[#004493] hover:underline"
         >
           ← Back to User Accounts
         </button>
@@ -71,8 +71,8 @@ export default function UserDetailPage() {
 
       {/* Page Header */}
       <div className="flex items-center gap-4 mb-7">
-        <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center
-          text-blue-700 font-bold text-xl flex-shrink-0">
+        <div className="w-14 h-14 rounded-full bg-[#EBF2FF] flex items-center justify-center
+          text-[#004493] font-bold text-xl flex-shrink-0">
           {user.name.charAt(0)}
         </div>
         <div>

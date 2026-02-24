@@ -88,7 +88,7 @@ function StatusTimeline({ log }: { log: ESIMStatusLog }) {
           <div className="flex flex-col items-center w-8 flex-shrink-0">
             <div className={`w-3 h-3 rounded-full border-2 flex-shrink-0 mt-1 ${
               step.reached
-                ? 'bg-blue-500 border-blue-500'
+                ? 'bg-blue-500 border-[#004493]'
                 : 'bg-white border-slate-300'
             }`} />
             {i < steps.length - 1 && (
@@ -129,7 +129,7 @@ export default function ESIMDetailPage() {
       <div className="p-8 text-center text-slate-400">
         <p className="text-lg">eSIM order not found.</p>
         <button onClick={() => router.push('/esim')}
-          className="mt-4 text-sm text-blue-600 hover:underline">
+          className="mt-4 text-sm text-[#004493] hover:underline">
           ← Back to e-SIM
         </button>
       </div>
@@ -210,7 +210,7 @@ export default function ESIMDetailPage() {
               <p>
                 <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold mr-2 ${
                   order.payment.cardType === 'Credit'
-                    ? 'bg-blue-50 text-blue-700'
+                    ? 'bg-blue-50 text-[#004493]'
                     : 'bg-amber-50 text-amber-700'
                 }`}>
                   {order.payment.cardType}
@@ -252,7 +252,7 @@ export default function ESIMDetailPage() {
             <InfoRow label="Linked Main Order" value={
               order.linkedMainOrderId
                 ? <Link href={`/esim/${order.linkedMainOrderId}`}
-                    className="text-blue-600 hover:underline font-mono text-xs font-semibold">
+                    className="text-[#004493] hover:underline font-mono text-xs font-semibold">
                     {order.linkedMainOrderId} →
                   </Link>
                 : '—'
@@ -296,7 +296,7 @@ export default function ESIMDetailPage() {
                         <td className="px-6 py-3"><ESIMStatusBadge status={t.status} /></td>
                         <td className="px-6 py-3">
                           <Link href={`/esim/${t.id}`}
-                            className="text-blue-600 hover:text-blue-800 text-xs font-medium">
+                            className="text-[#004493] hover:text-[#003070] text-xs font-medium">
                             View →
                           </Link>
                         </td>

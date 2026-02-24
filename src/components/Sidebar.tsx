@@ -81,18 +81,17 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="w-64 min-h-screen bg-slate-900 flex flex-col">
-      {/* Logo / Brand */}
-      <div className="px-6 py-5 border-b border-slate-700">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-blue-500 flex items-center justify-center">
-            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <span className="text-white font-semibold text-base tracking-tight">ThaiPass CMS</span>
-        </div>
+    <aside className="w-64 min-h-screen bg-white border-r border-slate-200 flex flex-col">
+      {/* Logo */}
+      <div className="px-6 py-5 border-b border-slate-100">
+        <img
+            src="/logo.png"
+            alt="ThaiPass"
+            className="h-16 w-auto object-contain"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+            }}
+          />
       </div>
 
       {/* Navigation */}
@@ -103,8 +102,8 @@ export default function Sidebar() {
             href={item.href}
             className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
               isActive(item.href)
-                ? 'bg-blue-600 text-white'
-                : 'text-slate-400 hover:bg-slate-800 hover:text-white'
+                ? 'bg-[#004493] text-white'
+                : 'text-slate-500 hover:bg-slate-100 hover:text-[#004493]'
             }`}
           >
             {item.icon}
@@ -114,8 +113,8 @@ export default function Sidebar() {
       </nav>
 
       {/* Footer */}
-      <div className="px-4 py-4 border-t border-slate-700">
-        <p className="text-xs text-slate-500 text-center">ThaiPass Admin v1.0</p>
+      <div className="px-4 py-4 border-t border-slate-100">
+        <p className="text-xs text-slate-400 text-center">ThaiPass Admin v1.0</p>
       </div>
     </aside>
   );
