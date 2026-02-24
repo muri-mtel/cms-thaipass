@@ -125,7 +125,7 @@ function RevenueRow({
       <span className={`w-36 text-right text-sm ${bold ? 'font-bold text-slate-900' : 'font-medium text-slate-700'}`}>
         {thb(total)}
       </span>
-      <span className={`w-36 text-right text-sm ${bold ? 'font-bold text-blue-700' : 'font-medium text-blue-600'}`}>
+      <span className={`w-36 text-right text-sm ${bold ? 'font-bold text-[#004493]' : 'font-medium text-[#004493]'}`}>
         {thb(platform)}
       </span>
     </div>
@@ -242,7 +242,7 @@ export default function DashboardPage() {
                 max={toStr}
                 onChange={(e) => setFromStr(e.target.value)}
                 className="text-sm border border-slate-200 rounded-lg px-3 py-1.5 text-slate-700
-                  focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                  focus:outline-none focus:ring-2 focus:ring-[#004493] bg-white"
               />
             </div>
 
@@ -257,13 +257,13 @@ export default function DashboardPage() {
                 max={toInputDate(new Date())}
                 onChange={(e) => setToStr(e.target.value)}
                 className="text-sm border border-slate-200 rounded-lg px-3 py-1.5 text-slate-700
-                  focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                  focus:outline-none focus:ring-2 focus:ring-[#004493] bg-white"
               />
             </div>
 
             {/* Day count badge */}
             {fromStr && toStr && new Date(fromStr) <= new Date(toStr) && (
-              <span className="text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200
+              <span className="text-xs font-semibold text-[#004493] bg-blue-50 border border-blue-200
                 px-2.5 py-1 rounded-full whitespace-nowrap">
                 {Math.round(
                   (new Date(toStr).getTime() - new Date(fromStr).getTime()) / (1000 * 60 * 60 * 24)
@@ -316,7 +316,7 @@ export default function DashboardPage() {
         <section>
           <SectionHeader
             title="FastPass"
-            color="bg-blue-600"
+            color="bg-[#004493]"
             icon={
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />

@@ -215,7 +215,7 @@ export default function TDACDetailPage() {
         <p className="text-lg">TDAC entry not found.</p>
         <button
           onClick={() => router.push('/tdac')}
-          className="mt-4 text-sm text-blue-600 hover:underline"
+          className="mt-4 text-sm text-[#004493] hover:underline"
         >
           ← Back to TDAC
         </button>

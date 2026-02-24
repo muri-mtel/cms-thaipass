@@ -56,7 +56,7 @@ export default function FastPassDetailPage() {
         <p className="text-lg">Order not found.</p>
         <button
           onClick={() => router.push('/fastpass')}
-          className="mt-4 text-sm text-blue-600 hover:underline"
+          className="mt-4 text-sm text-[#004493] hover:underline"
         >
           ← Back to FastPass
         </button>

@@ -60,7 +60,7 @@ export default function ESIMPage() {
           <button key={s}
             onClick={() => setStatusFilter(statusFilter === s ? 'All' : s)}
             className={`text-left bg-white rounded-xl border shadow-sm px-5 py-4 transition-all ${
-              statusFilter === s ? 'border-blue-500 ring-1 ring-blue-500' : 'border-slate-200 hover:border-slate-300'
+              statusFilter === s ? 'border-[#004493] ring-1 ring-blue-500' : 'border-slate-200 hover:border-slate-300'
             }`}
           >
             <p className="text-xs font-medium text-slate-400 uppercase tracking-wide mb-1">{s}</p>
@@ -71,7 +71,7 @@ export default function ESIMPage() {
           <button key={t}
             onClick={() => setTypeFilter(typeFilter === t ? 'All' : t)}
             className={`text-left bg-white rounded-xl border shadow-sm px-5 py-4 transition-all ${
-              typeFilter === t ? 'border-blue-500 ring-1 ring-blue-500' : 'border-slate-200 hover:border-slate-300'
+              typeFilter === t ? 'border-[#004493] ring-1 ring-blue-500' : 'border-slate-200 hover:border-slate-300'
             }`}
           >
             <p className="text-xs font-medium text-slate-400 uppercase tracking-wide mb-1">{t}</p>
@@ -91,13 +91,13 @@ export default function ESIMPage() {
           <input type="text" placeholder="Search by order ID or email…"
             value={search} onChange={(e) => setSearch(e.target.value)}
             className="w-full pl-9 pr-4 py-2 text-sm border border-slate-200 rounded-lg bg-white
-              text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#004493]" />
         </div>
 
         <select value={productFilter}
           onChange={(e) => setProductFilter(e.target.value as ESIMProductName | 'All')}
           className="px-3 py-2 text-sm border border-slate-200 rounded-lg bg-white text-slate-700
-            focus:outline-none focus:ring-2 focus:ring-blue-500">
+            focus:outline-none focus:ring-2 focus:ring-[#004493]">
           <option value="All">All Products</option>
           {ALL_PRODUCTS.map((p) => <option key={p} value={p}>{p}</option>)}
         </select>
@@ -105,7 +105,7 @@ export default function ESIMPage() {
         <select value={typeFilter}
           onChange={(e) => setTypeFilter(e.target.value as ESIMOrderType | 'All')}
           className="px-3 py-2 text-sm border border-slate-200 rounded-lg bg-white text-slate-700
-            focus:outline-none focus:ring-2 focus:ring-blue-500">
+            focus:outline-none focus:ring-2 focus:ring-[#004493]">
           <option value="All">Main &amp; Top-up</option>
           {ALL_TYPES.map((t) => <option key={t} value={t}>{t}</option>)}
         </select>
@@ -113,7 +113,7 @@ export default function ESIMPage() {
         <select value={statusFilter}
           onChange={(e) => setStatusFilter(e.target.value as ESIMStatus | 'All')}
           className="px-3 py-2 text-sm border border-slate-200 rounded-lg bg-white text-slate-700
-            focus:outline-none focus:ring-2 focus:ring-blue-500">
+            focus:outline-none focus:ring-2 focus:ring-[#004493]">
           <option value="All">All Statuses</option>
           {ALL_STATUSES.map((s) => <option key={s} value={s}>{s}</option>)}
         </select>
@@ -153,7 +153,7 @@ export default function ESIMPage() {
                     <td className="px-5 py-4 whitespace-nowrap">
                       <span className={`text-xs font-medium px-2 py-0.5 rounded-md ${
                         o.productName === 'Free eSIM'      ? 'bg-slate-100 text-slate-600' :
-                        o.productName === 'Standard eSIM'  ? 'bg-blue-50 text-blue-700' :
+                        o.productName === 'Standard eSIM'  ? 'bg-blue-50 text-[#004493]' :
                                                              'bg-purple-50 text-purple-700'
                       }`}>
                         {o.productName}
@@ -186,7 +186,7 @@ export default function ESIMPage() {
                     </td>
                     <td className="px-5 py-4">
                       <Link href={`/esim/${o.id}`}
-                        className="text-blue-600 hover:text-blue-800 font-medium text-xs whitespace-nowrap">
+                        className="text-[#004493] hover:text-[#003070] font-medium text-xs whitespace-nowrap">
                         View →
                       </Link>
                     </td>

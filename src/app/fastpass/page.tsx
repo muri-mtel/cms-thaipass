@@ -59,7 +59,7 @@ export default function FastPassPage() {
             onClick={() => setStatusFilter(statusFilter === status ? 'All' : status)}
             className={`text-left bg-white rounded-xl border shadow-sm px-5 py-4 transition-all ${
               statusFilter === status
-                ? 'border-blue-500 ring-1 ring-blue-500'
+                ? 'border-[#004493] ring-1 ring-blue-500'
                 : 'border-slate-200 hover:border-slate-300'
             }`}
           >
@@ -88,7 +88,7 @@ export default function FastPassPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="w-full pl-9 pr-4 py-2 text-sm border border-slate-200 rounded-lg bg-white
-              text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#004493]"
           />
         </div>
 
@@ -97,7 +97,7 @@ export default function FastPassPage() {
           value={statusFilter}
           onChange={(e) => setStatusFilter(e.target.value as FastPassStatus | 'All')}
           className="px-3 py-2 text-sm border border-slate-200 rounded-lg bg-white text-slate-700
-            focus:outline-none focus:ring-2 focus:ring-blue-500"
+            focus:outline-none focus:ring-2 focus:ring-[#004493]"
         >
           <option value="All">All Statuses</option>
           {ALL_STATUSES.map((s) => (
@@ -149,7 +149,7 @@ export default function FastPassPage() {
                   <td className="px-5 py-4">
                     <Link
                       href={`/fastpass/${encodeURIComponent(order.id)}`}
-                      className="text-blue-600 hover:text-blue-800 font-medium text-xs"
+                      className="text-[#004493] hover:text-[#003070] font-medium text-xs"
                     >
                       View →
                     </Link>

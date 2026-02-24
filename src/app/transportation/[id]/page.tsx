@@ -76,7 +76,7 @@ export default function TransportDetailPage() {
       <div className="p-8 text-center text-slate-400">
         <p className="text-lg">Booking not found.</p>
         <button onClick={() => router.push('/transportation')}
-          className="mt-4 text-sm text-blue-600 hover:underline">
+          className="mt-4 text-sm text-[#004493] hover:underline">
           ← Back to Transportation
         </button>
       </div>
@@ -108,7 +108,7 @@ export default function TransportDetailPage() {
         </div>
         <div className="flex items-center gap-3">
           {isPending && (
-            <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700
+            <button className="flex items-center gap-2 px-4 py-2 bg-[#004493] hover:bg-[#003070]
               text-white text-sm font-medium rounded-lg transition-colors shadow-sm">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}

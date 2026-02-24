@@ -44,7 +44,7 @@ export default function UsersPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="w-full pl-9 pr-4 py-2 text-sm border border-slate-200 rounded-lg bg-white
-              text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#004493]"
           />
         </div>
       </div>
@@ -78,8 +78,8 @@ export default function UsersPage() {
                   {/* Name + Avatar */}
                   <td className="px-5 py-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center
-                        text-blue-700 font-semibold text-sm flex-shrink-0">
+                      <div className="w-8 h-8 rounded-full bg-[#EBF2FF] flex items-center justify-center
+                        text-[#004493] font-semibold text-sm flex-shrink-0">
                         {user.name.charAt(0)}
                       </div>
                       <span className="font-medium text-slate-900">{user.name}</span>
@@ -110,7 +110,7 @@ export default function UsersPage() {
                   <td className="px-5 py-4">
                     <Link
                       href={`/users/${user.id}`}
-                      className="text-blue-600 hover:text-blue-800 font-medium text-xs"
+                      className="text-[#004493] hover:text-[#003070] font-medium text-xs"
                     >
                       View →
                     </Link>
